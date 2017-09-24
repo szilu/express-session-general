@@ -1,4 +1,31 @@
-# express-session
+# express-session-general
+
+## Changes on this fork
+
+This modified version of the express-session middleware makes it possible to inject a session ID before the session middleware is running.
+
+**Note** It is Important to set req.sessionID **before** the session middleware.
+
+**WARNING** It is usually a **BAD IDEA** to not use cookie based sessions in browsers. The purpose of this fork is to make it possible to implement API gateways for special client software, where cookies are not possible, or simply unnecessary.
+
+**YOU HAVE BEEN WARNED!**
+
+### Example:
+
+```js
+var express = require('express')
+var session = require('express-session-general')
+
+express.use(function(req, res, next) {
+    if (req.query && req.query.sessid) req.sessionID = req.query.sessid
+    next()
+})
+express.use(session({...})
+```
+
+
+
+# Original documentation
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
