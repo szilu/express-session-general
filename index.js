@@ -213,7 +213,14 @@ function session(options) {
     req.sessionStore = store;
 
     // get the session ID from the cookie
-    var cookieId = req.sessionID = getcookie(req, name, secrets);
+    var cookieId;
+    if (req.sessionID) {
+	// if req.sessionID is already set, do not generate new ID
+	cookieId = req.sessionID;
+    } else {
+	cookieId = req.sessionID = getcookie(req, name, secrets);
+    }
+
 
     // set-cookie
     onHeaders(res, function(){
