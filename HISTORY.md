@@ -1,6 +1,11 @@
 unreleased
 ==========
 
+  * deps: crc@3.5.0
+
+1.15.6 / 2017-09-26
+===================
+
   * deps: debug@2.6.9
   * deps: parseurl@~1.3.2
     - perf: reduce overhead for full URLs

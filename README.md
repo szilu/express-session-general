@@ -31,7 +31,6 @@ express.use(session({...})
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
-[![Gratipay][gratipay-image]][gratipay-url]
 
 ## Installation
 
@@ -427,6 +426,11 @@ to its original value.
 req.session.cookie.maxAge // => 30000
 ```
 
+#### Cookie.originalMaxAge
+
+The `req.session.cookie.originalMaxAge` property returns the original
+`maxAge` (time-to-live), in milliseconds, of the session cookie.
+
 ### req.sessionID
 
 To get the ID of the loaded session, access the request property
@@ -622,6 +626,11 @@ and other multi-core embedded devices).
 [connect-session-sequelize-url]: https://www.npmjs.com/package/connect-session-sequelize
 [connect-session-sequelize-image]: https://img.shields.io/github/stars/mweibel/connect-session-sequelize.svg?label=%E2%98%85
 
+[![★][couchdb-expression-image] couchdb-expression][couchdb-expression-url] A [CouchDB](https://couchdb.apache.org/)-based session store.
+
+[couchdb-expression-url]: https://www.npmjs.com/package/couchdb-expression
+[couchdb-expression-image]: https://img.shields.io/github/stars/tkshnwesper/couchdb-expression.svg?label=%E2%98%85
+
 [![★][dynamodb-store-image] dynamodb-store][dynamodb-store-url] A DynamoDB-based session store.
 
 [dynamodb-store-url]: https://www.npmjs.com/package/dynamodb-store
@@ -712,6 +721,11 @@ based session store. Supports all backends supported by Fortune (MongoDB, Redis,
 [nedb-session-store-url]: https://www.npmjs.com/package/nedb-session-store
 [nedb-session-store-image]: https://img.shields.io/github/stars/JamesMGreene/nedb-session-store.svg?label=%E2%98%85
 
+[![★][restsession-image] restsession][restsession-url] Store sessions utilizing a RESTful API
+
+[restsession-url]: https://www.npmjs.com/package/restsession
+[restsession-image]: https://img.shields.io/github/stars/jankal/restsession.svg?label=%E2%98%85
+
 [![★][sequelstore-connect-image] sequelstore-connect][sequelstore-connect-url] A session store using [Sequelize.js](http://sequelizejs.com/).
 
 [sequelstore-connect-url]: https://www.npmjs.com/package/sequelstore-connect
@@ -726,6 +740,11 @@ based session store. Supports all backends supported by Fortune (MongoDB, Redis,
 
 [session-rethinkdb-url]: https://www.npmjs.com/package/session-rethinkdb
 [session-rethinkdb-image]: https://img.shields.io/github/stars/llambda/session-rethinkdb.svg?label=%E2%98%85
+
+[![★][sessionstore-image] sessionstore][sessionstore-url] A session store that works with various databases.
+
+[sessionstore-url]: https://www.npmjs.com/package/sessionstore
+[sessionstore-image]: https://img.shields.io/github/stars/adrai/sessionstore.svg?label=%E2%98%85
 
 ## Example
 
@@ -779,5 +798,3 @@ app.get('/bar', function (req, res, next) {
 [coveralls-url]: https://coveralls.io/r/expressjs/session?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/express-session.svg
 [downloads-url]: https://npmjs.org/package/express-session
-[gratipay-image]: https://img.shields.io/gratipay/dougwilson.svg
-[gratipay-url]: https://gratipay.com/dougwilson/
